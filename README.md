@@ -13,3 +13,7 @@
  This project depends on pyenv and pipenv.  To install the dependencies, run the following commands:
 
     pipenv install --python=$(pyenv which python)
+
+## Docker
+
+For AutoGen to execute code it used Docker.  You will need to have Docker installed and running before you can run the coder agent demo.
