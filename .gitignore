@@ -1,0 +1,10 @@
+.venv
+.cache
+__pycache__
+working_dir
+.DS_Store
+.env
+**/talks
+**/Documents
+**/scripts
+**/dev
