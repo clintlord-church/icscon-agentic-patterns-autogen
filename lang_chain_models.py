@@ -1,14 +1,16 @@
-from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI, AzureChatOpenAI
 from langchain_anthropic import ChatAnthropic
 from langchain_fireworks import ChatFireworks
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_ollama import ChatOllama
 from langchain_core.output_parsers import StrOutputParser
 from enum import Enum
+import os
 
 class Model(Enum):
     GPT4o = "gpt-4o"
     GPT4oMini = "gpt-4o-mini"
+    AzureGPT4oMini = "azure-gpt-4o-mini"
     Claude35Sonnet = "claude-3-5-sonnet"
     Llama31_8b = "llama-31-8b"
     Llama31_70b = "llama-31-70b"
@@ -22,6 +24,8 @@ def get_chain(model: Model, include_parser: bool, format: str=''):
         chat_model = ChatOpenAI(model="gpt-4o-2024-08-06")
     elif model == Model.GPT4oMini:
         chat_model = ChatOpenAI(model="gpt-4o-mini-2024-07-18")
+    elif model == Model.AzureGPT4oMini:
+        chat_model = AzureChatOpenAI(model="gpt-4o-mini", api_version=os.environ["AZURE_OPENAI_API_VERSION"])
     elif model == Model.Claude35Sonnet:
         chat_model = ChatAnthropic(model="claude-3-5-sonnet-20240620")
     elif model == Model.Llama31_405b:

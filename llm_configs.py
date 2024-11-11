@@ -10,6 +10,14 @@ gpt4o_mini_llm_config = {
     "api_key": os.environ["OPENAI_API_KEY"]
 }
 
+azure_gpt4o_mini_llm_config = {
+    "model": "gpt-4o-mini",
+    "base_url": os.environ["AZURE_OPENAI_ENDPOINT"],
+    "api_key": os.environ["AZURE_OPENAI_API_KEY"],
+    "api_version": os.environ["AZURE_OPENAI_API_VERSION"],
+    "api_type": "azure"
+}
+
 claude_llm_config = {
     "model": "claude-3-5-sonnet-20240620",
     "api_key": os.environ["ANTHROPIC_API_KEY"],

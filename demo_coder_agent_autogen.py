@@ -5,7 +5,7 @@ import llm_configs, os
 # "the code execution is successful and"
 system_message = AssistantAgent.DEFAULT_SYSTEM_MESSAGE + " If the code execution is successful, do not write any new code, just respond with the word 'terminate'.  Don't use any external sources that require an API key or subscription access."
 # Create an assistant agent that writes python code in response to a another agent's message
-code_writer = AssistantAgent("code_writer", system_message=system_message, description="Writes python code", llm_config=llm_configs.gpt4o_mini_llm_config)
+code_writer = AssistantAgent("code_writer", system_message=system_message, description="Writes python code", llm_config=llm_configs.azure_gpt4o_mini_llm_config)
 
 
 # set the temp_dir to the current script directory

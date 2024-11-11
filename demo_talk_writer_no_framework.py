@@ -2,7 +2,7 @@ from lang_chain_models import Model
 from ClintsCoolAgent import ClintsCoolAgent
 import json, os
 
-model = Model.GPT4oMini
+model = Model.AzureGPT4oMini
 
 # ANSI escape codes for color
 RED = "\033[31m"
