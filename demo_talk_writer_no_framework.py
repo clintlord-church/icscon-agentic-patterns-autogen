@@ -19,7 +19,7 @@ talk_planner_agent = ClintsCoolAgent(model, """
     The talk outline should include atleast an introduction, three main points, and a conclusion, but can include more.
     Format the outline in a json array in which each description of the talk section is a string.
     No other content should be included in the response.  It should only be a RAW json array (with no additional markup) in this format:
-    ["Description of the first section", "description of the second section", "description of the third section", "description of the fourth section"]                              
+    ["Description of the first section", "description of the second section", "description of the third section", "description of the fourth section"]
     """
 )
 
