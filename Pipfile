@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 packaging = "*"
 pyautogen = {extras = ["anthropic"], version = "*"}
-streamlit = "*"
 requests = "*"
 langchain = "*"
 langchain-openai = "*"
@@ -24,4 +23,3 @@ langchain-ollama = "*"
 
 [requires]
 python_version = "3.12"
-python_full_version = "3.12.2"
